@@ -20,12 +20,6 @@ def config():
 
 
 @pytest.fixture(scope='session')
-def config_wait_time(config):
-    # Validate and return the wait time from the config data
-    return config['wait_time'] if 'wait_time' in config else DEFAULT_WAIT_TIME
-
-
-@pytest.fixture(scope='session')
 def config_driver_path(config):
     # Return the driver path from the config data
     if 'driver_path' not in config:
